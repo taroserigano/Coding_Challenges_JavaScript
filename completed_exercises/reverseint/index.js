@@ -31,3 +31,17 @@ function rev(n) {
 }
 
 console.log(rev(1511))
+
+
+var reverse = function (num) {
+
+    const n = parseInt(
+        num.toString().split('').reverse().join('')
+    );
+
+    return num < 0 ? -Math.abs(n) : n;
+};
+
+console.log(reverse(-1233));
+
+console.log(Math.sign(-123))
