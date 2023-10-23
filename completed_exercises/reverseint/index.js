@@ -7,17 +7,27 @@
 //   reverseInt(500) === 5
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
+// function reverseInt(n) {
+     
+    
+//   const reversed = n
+//     .toString()
+//     .split('')
+//     .reverse()
+//     .join('')
 
-function reverseInt(n) {
-  const reversed = n
-    .toString()
-    .split('')
-    .reverse()
-    .join('');
+// //   return parseInt(reversed) * Math.sign(n);
+//     // if(n < 0) reversed * -1
+//     return (n<0) ? -1 * reversed : reversed
 
-//   return parseInt(reversed) * Math.sign(n);
-    return parseInt(reversed)) * -1;
+// }
 
+
+function rev(n) {
+  const reversed = parseInt(String(n).split('').reverse().join('')); // turn a number into a string, then turn it into an array to reverse. 
+  return (n < 0) ? -reversed : reversed
+  
+  // Math.sign(n) * parseInt(reversed); // Math.sign will return -1 as for negative number, 1 as for position number, 0 as for zero.
 }
 
-module.exports = reverseInt;
+console.log(rev(1511))
