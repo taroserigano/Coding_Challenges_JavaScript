@@ -45,3 +45,29 @@ var reverse = function (num) {
 console.log(reverse(-1233));
 
 console.log(Math.sign(-123))
+
+
+
+
+
+
+
+const pal = (num) => { 
+
+let n = Math.abs(num) 
+let rev = 0 
+
+console.log(n) 
+
+while(n !== 0){ 
+    let reminder = n % 10 
+    rev = rev*10 + reminder 
+    n = Math.floor(n / 10)
+} 
+
+return rev * Math.sign(num)
+
+} 
+
+
+console.log(pal(-1234))
